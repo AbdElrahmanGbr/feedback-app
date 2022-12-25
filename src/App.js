@@ -5,10 +5,15 @@ import FeedbackList from "./components/FeedbackList";
 
 function App() {
     const [feedback, setFeedback] = useState(FeedbackData)
+    const deleteFeedback = (id) =>{
+        if(window.confirm('Are you Sure you want to DELETE?')){
+            setFeedback(feedback.filter((item)=> item.id !== id))
+        }
+    }
     return (<>
         <Header />
         <div className={"container"}>
-            <FeedbackList feedback={feedback}/>
+            <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
         </div>
     </>)
 }
