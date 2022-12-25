@@ -8,11 +8,3 @@ root.render(
         <App/>
     </React.StrictMode>
     );
-
-// Deprecation notice: ReactDOM.render is no longer supported in React 18
-// import ReactDOM from 'react-dom';
-// ReactDOM.render(
-//     <React.StrictMode>
-//         <App/>
-//     </React.StrictMode>
-//     , document.getElementById('root'));
